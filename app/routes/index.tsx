@@ -7,7 +7,7 @@ export default function Index() {
   const user = useOptionalUser();
   return (
     <div className="text-red-500">
-      this is my app!
+      this is my app!!
       {/* <SearchBar />
       <UniversalResults
         verticalConfigMap={{
