@@ -16,8 +16,8 @@ import {
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import { getUser } from "./session.server";
 
-// import {AnswersHeadlessProvider} from "@yext/answers-headless-react"
-// import { answersSandboxEndpoints } from "../answersConfig";
+import {AnswersHeadlessProvider} from "@yext/answers-headless-react"
+import { answersSandboxEndpoints } from "../answersConfig";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
@@ -41,12 +41,12 @@ export const loader: LoaderFunction = async ({ request }) => {
 
 export default function App() {
   return (
-    // <AnswersHeadlessProvider
-    //  experienceKey="test-experience"
-    //  apiKey="9641a03ad3de221fb9c566b0c9148351"
-    //  locale="en"
-    //  endpoints={answersSandboxEndpoints}
-    // >
+    <AnswersHeadlessProvider
+     experienceKey="test-experience"
+     apiKey="9641a03ad3de221fb9c566b0c9148351"
+     locale="en"
+     endpoints={answersSandboxEndpoints}
+    >
     <html lang="en" className="h-full">
       <head>
         <Meta />
@@ -59,6 +59,6 @@ export default function App() {
         <LiveReload />
       </body>
     </html>
-    // </AnswersHeadlessProvider>
+    </AnswersHeadlessProvider>
   );
 }
